@@ -6,7 +6,19 @@ default_model = "dall-e-2"
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")
 )
-number_of_images_generated_const = 9
+
+# Predefined Styles
+STYLES = [
+    "realistic photography",
+    "cyberpunk futuristic art",
+    "anime style",
+    "oil painting",
+    "pencil sketch",
+    "3D render",
+    "watercolor painting",
+    "fantasy illustration",
+    "pixel art"
+]
 
 
 def download_image(url, image_number):
@@ -14,11 +26,13 @@ def download_image(url, image_number):
     open(f"images/image_{image_number}.png", 'wb').write(r.content)
 
 
-def generate_images(prompt: str, number_of_images_generated: int):
-    for i in range(number_of_images_generated):
+def generate_images(prompt: str):
+    for i, style in enumerate(STYLES):
+        print(f"Generating images number {i + 1} with style {style}...")
+        finalPrompt = prompt + "with style: " + style
         response = client.images.generate(
             model="dall-e-2",
-            prompt=prompt,
+            prompt=finalPrompt,
             response_format="url",
             quality="standard"
         )
@@ -28,6 +42,6 @@ def generate_images(prompt: str, number_of_images_generated: int):
 if __name__ == '__main__':
     prompt = input("Enter a prompt: ")
     if prompt:
-        generate_images(prompt, number_of_images_generated_const)
+        generate_images(prompt)
     else:
         "No prompt entered"
