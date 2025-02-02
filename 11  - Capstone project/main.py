@@ -13,8 +13,7 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 imdb_link_fetcher = ImdbMovieLinkFetcher()
-
-st.set_page_config(layout="wide", page_title="EPAM reference", page_icon="🤩")
+st.set_page_config(page_title="Movie GPT")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -217,4 +216,3 @@ if prompt := st.chat_input("Ask about movies (e.g., 'Hi, find the movie Doom?')"
             st.error(f"An error occurred while processing your request: {e}")
 
     sql_conversation.add_message("assistant", chat_response)
-
