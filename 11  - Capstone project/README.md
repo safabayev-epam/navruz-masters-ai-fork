@@ -13,6 +13,13 @@ MovieGPT is an AI-powered web application that uses OpenAI's GPT model combined 
 
 ---
 
+## Live Demo
+
+MovieGPT is now live! Try it here: **[movie-gpt.streamlit.app](https://movie-gpt.streamlit.app/)**
+
+---
+
+
 ## How it Works
 
 1. **Database Queries**:
