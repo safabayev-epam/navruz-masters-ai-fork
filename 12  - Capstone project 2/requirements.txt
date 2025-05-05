@@ -1,0 +1,11 @@
+gradio
+langchain
+langchain-community
+pypdf
+chromadb
+openai
+jira
+sentence-transformers
+transformers
+tiktoken
+pdfplumber
