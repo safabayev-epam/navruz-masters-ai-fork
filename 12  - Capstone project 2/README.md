@@ -9,6 +9,11 @@ A Gradio-based Retrieval-Augmented Generation (RAG) AI chatbot that:
 
 ---
 
+## Hugging Face
+https://huggingface.co/spaces/safabayev/support-chatbot
+
+---
+
 ## Repository Structure
 
 ```
