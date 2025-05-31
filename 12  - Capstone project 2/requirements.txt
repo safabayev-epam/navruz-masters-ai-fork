@@ -1,11 +1,10 @@
-gradio
+streamlit
+python-dotenv
+PyPDF2
 langchain
 langchain-community
-pypdf
-chromadb
+langchain-openai
+faiss-cpu
 openai
-jira
 sentence-transformers
-transformers
-tiktoken
-pdfplumber
+streamlit-modal
